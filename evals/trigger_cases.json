@@ -1,0 +1,42 @@
+{
+  "should_trigger": [
+    "任务完成后的即时复盘与能力进化审计",
+    "做一次复盘一，等我看完后我说继续，再执行复盘二",
+    "复盘后的实际修复与双向能力升级",
+    "把这套两段式任务复盘流程做成 Agent Skill",
+    "先审计完整对话，等人类阅读后再落地 Agent 修复和协作手册",
+    "先做任务复盘和能力审计，等人类阅读后再执行 Agent 侧修复与协作手册升级",
+    "开始复盘",
+    "Continue with retrospective phase two after I have read phase one",
+    "轻量经验检查：只提炼这次返工教训",
+    "检查返工、错误放行、验证不足与正确做法"
+  ],
+  "should_not_trigger": [
+    "做一个普通的项目周报",
+    "只检查这篇文章的引用是否有证据",
+    "安装一个已有的 Agent Skill",
+    "把这次生产资料写成一篇知识文章，不需要修复能力"
+  ],
+  "near_neighbor": [
+    {
+      "text": "这个任务失败了，直接修复 bug 并测试",
+      "expect": "no_trigger"
+    },
+    {
+      "text": "只想复盘一下今天的工作，不执行第二阶段",
+      "expect": "no_trigger"
+    },
+    {
+      "text": "继续上次任务的代码实现",
+      "expect": "no_trigger"
+    },
+    {
+      "text": "保存这条教训，但不要实施任何修复",
+      "expect": "trigger"
+    },
+    {
+      "text": "继续，只解释复盘一里这个建议是什么意思",
+      "expect": "trigger"
+    }
+  ]
+}
